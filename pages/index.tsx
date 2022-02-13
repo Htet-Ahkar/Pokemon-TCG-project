@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 // Components
-import { Search, Cards } from '../components'
+import { Search, Cards, Button } from '../components'
 
 // API
 import * as api from '../api/index'
@@ -12,7 +12,6 @@ export default function Home() {
   const [types, setTypes] = useState('')
   const [rarity, setRarity] = useState('')
   const [isNewestSets, setIsNewestSets] = useState(true)
-  console.log(isNewestSets)
 
   const getCardsData = async () => {
     try {
@@ -35,8 +34,6 @@ export default function Home() {
     return () => {}
   }, [limit, keyWord, types, rarity, isNewestSets])
 
-  console.log(cardsData)
-
   return (
     <main className="flex min-h-screen flex-col items-center bg-mainBg px-5 pb-2 pt-24">
       {/* Search */}
@@ -51,7 +48,7 @@ export default function Home() {
       {cardsData !== null && <Cards cardsData={cardsData} />}
 
       {/* Button */}
-      <div>more</div>
+      <Button setLimit={setLimit} />
     </main>
   )
 }

@@ -30,15 +30,13 @@ export const getCards = async (
     url = `${baseURL}/cards?page=1&pageSize=${limit}&q=rarity:${rarity}`
   }
 
-  console.log(url)
-
   try {
     if (isNewestSets) {
-      const response = await axios.get(`${url}&orderBy=-set.releaseDate`)
+      const response = await axios.get(`${url}&orderBy=-set.releaseDate,name`)
       const { data } = response.data
       return data
     } else {
-      const response = await axios.get(`${url}&orderBy=set.releaseDate`)
+      const response = await axios.get(`${url}&orderBy=set.releaseDate,name`)
       const { data } = response.data
       return data
     }

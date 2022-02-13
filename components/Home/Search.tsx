@@ -58,7 +58,7 @@ const Search = ({
 
   if (allTypes !== null && allRarities !== null) {
     return (
-      <section className="flex w-full  flex-col items-center justify-center">
+      <section className="mt-5  flex w-full flex-col items-center justify-center">
         {/* Searchbar */}
         <input
           type="text"

@@ -8,6 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: 'rgb(var(--primary))',
+        secondary: 'rgb(var(--secondary))',
         mainBg: 'rgb(var(--mainBg))',
         mainText: 'var(--mainText)',
         placeholder: 'var(--pladeholder)',

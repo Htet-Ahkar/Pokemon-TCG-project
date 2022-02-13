@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="fixed flex w-screen flex-col items-center justify-center bg-white shadow-allShadow">
+    <header className="fixed z-10 flex w-screen flex-col items-center justify-center bg-white shadow-allShadow">
       {/* Header */}
       <h1 className="py-5 text-2xl font-[900] text-mainText">
         TCG Marketplace
